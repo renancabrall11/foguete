@@ -36,12 +36,61 @@
 <body>
  <img id="foguete" src="foguete.gif" width="80px" class="foguete">
  <img src="full-moon-cartoon-icon-png.png" width="200px" class="lua">
+ <audio id="audio">
+        <source src="contagem_regressiva.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio2">
+        <source src="lancamento_foguete.mp3" type="audio/mp3">
+    </audio>
+    <audio id="audio3">
+        <source src="carina-stars-Aug-3.wav" type="audio/wav">
+    </audio>
 </body>
 
 <script src="jquery-3.7.0.min.js"> </script>
 
 <script>
+ var audio = new Audio();
+    audio.src = 'contagem_regressiva.mp3';
+    var audio2 = new Audio();
+    audio2.src = 'lancamento_foguete.mp3';
+    var audio3 = new Audio('we-have-a-problem.mp3');
+    audio2.src = 'carina-stars-Aug-3.wav';
+    function playAudio() 
+    {
+        audio.play();
+    }
+    setTimeout(playAudio, 500)
 
+    function playAudio2() 
+    {
+        audio2.play();
+    }
+    setTimeout(playAudio2, 15000)
+
+    function pausarAudio()
+    {
+        audio.pause()
+    }
+    setTimeout(pausarAudio, 15000)
+
+    function pausarAudio2()
+    {
+        audio2.pause()
+    }
+    setTimeout(pausarAudio2, 20000)
+    function playAudio3() 
+    {
+        audio3.play();
+    }
+    setTimeout(playAudio3, 20000)
+    function pausarAudio3()
+    {
+        audio2.pause()
+    }
+    setTimeout(pausarAudio3, 25000)
+data = new Date()
+tempo_inicial = data.getTime()
     data = new Date()
     tempo_inicial = data.getTime()
     
